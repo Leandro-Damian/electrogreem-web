@@ -38,10 +38,10 @@ const swiperHome = new Swiper('.home__swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // }
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    }
 })
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
@@ -65,10 +65,10 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-//  autoplay: {
-//      delay: 3000,
-//      disableOnInteraction: false,
-//  }
+ autoplay: {
+     delay: 3000,
+     disableOnInteraction: false,
+ }
 })
 
 /*=============== SHOW SCROLL UP ===============*/ 
@@ -132,3 +132,18 @@ themeButton.addEventListener('click', () =>{
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    delay: 300,
+    // reset: true, // Animations repeat
+})
+
+sr.reveal(`.home__container, .testimonial__container, .footer__container`)
+sr.reveal(`.home__title`, {delay: 600})
+sr.reveal(`.home__description`, {delay: 900})
+sr.reveal(`.home__data .button`, {delay: 1200})
+sr.reveal(`.destination__card, .gallery__card`, {interval: 100})
+sr.reveal(`.join__data`, {origin: 'left'})
+sr.reveal(`.join__img`, {origin: 'right'})
