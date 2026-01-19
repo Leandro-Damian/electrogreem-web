@@ -328,28 +328,10 @@ img {
   top: 0;
 }
 
-/* Change background header */
-/* .bg-header{
-  background-color: var(--body-color);
-  box-shadow: 0 8px 16px hsla(0, 0%, 0%, .1);
-} */
-
-/* .bg-header :is(.nav__logo, .nav__toggle, .nav__theme){
-  color: var(--title-color);
-} */
-
-/* .bg-header .nav__logo img{
-  filter: invert(100%);
-} */
-
 /* Active link */
 .active-link::after{
   width: 60%;
 }
-
-/*=============== HOME ===============*/
-
-
 
 /*=============== BUTTON ===============*/
 .button{
@@ -488,11 +470,6 @@ img {
   background-color: var(--body-color);
 }
 
-
-/*=============== TESTIMONIAL ===============*/
-/*=============== RAEE SECTION (MOBILE FIRST) ===============*/
-
-
 /* ---------- Definition ---------- */
 
 .raee__definition {
@@ -581,9 +558,6 @@ img {
 .raee__stats-card--alert .raee__stats-number {
   color: #ff6b6b;
 }
-
-
-/* ---------- Problem ---------- */
 
 /* ---------- RAEE PROBLEM CARD ---------- */
 
@@ -797,50 +771,177 @@ img {
   border-color: var(--opacity-color-20);
 }
 
+/*=============== SERVICES (FADE SLIDER) ===============*/
 
-
-/*=============== JOIN ===============*/
-.join__container{
-  row-gap: 3rem;
-  padding-bottom: 3rem;
+.services {
+  background-color: var(--container-color);
 }
 
-.join__data{
+/* Header */
+.services__header {
   text-align: center;
-}
-
-.join__data .section__title{
-  margin-bottom: 1rem;
-}
-
-.join__description{
   margin-bottom: 2rem;
 }
 
-.join__form{
-  display: grid;
-  row-gap: 1rem;
-}
-
-.join__input{
-  width: 100%;
-  background-color: var(--container-color);
+.services__subtitle {
+  font-size: var(--normal-font-size);
   color: var(--text-color);
-  padding: 1.5rem 1rem;
-  border-radius: .5rem;
-  transition: background-color .4s;
 }
 
-.join__button{
-  padding-block: 1.25rem;
-  cursor: pointer;
+/* Slider wrapper */
+.services__slider {
+  position: relative;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
 }
 
-.join__img{
-  width: 300px;
+/* Slides container */
+.services__slides {
+  position: relative;
+  width: 100%;
+  height: 420px; /* altura base mobile */
+}
+
+/* Single slide */
+.services__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
   border-radius: 1.5rem;
-  justify-self: center;
+  overflow: hidden;
+  background-color: #000;
 }
+
+/* Active slide */
+.services__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Image */
+.services__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Caption */
+.services__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 1.25rem 1.5rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  color: #fff;
+}
+
+.services__caption h3 {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.services__caption p {
+  font-size: var(--small-font-size);
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Arrows */
+.services__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+  color: var(--title-color);
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.services__arrow:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.services__arrow--prev {
+  left: 0.75rem;
+}
+
+.services__arrow--next {
+  right: 0.75rem;
+}
+
+/* Dark theme support */
+.dark-theme .services {
+  background-color: var(--body-color);
+}
+
+.dark-theme .services__arrow {
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #fff;
+}
+
+/*=============== COLLECTION POINT (Mobile First) ===============*/
+
+.collection-point {
+  padding-top: 3rem;
+}
+
+.collection-point__container {
+  display: flex;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+
+.collection-point__image {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 1.75rem;
+  border: 4px solid hsl(145, 63%, 32%);
+  box-shadow: 0 12px 28px hsla(145, 63%, 32%, 0.25);
+}
+
+.dark-theme .collection-point__image {
+  box-shadow: 0 12px 28px hsla(145, 63%, 42%, 0.35);
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+
+/* Tablets */
+@media screen and (min-width: 576px) {
+  .services__slides {
+    height: 480px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+  .services__slider {
+    max-width: 900px;
+  }
+
+  .services__slides {
+    height: 520px;
+  }
+}
+
 
 /*=============== FOOTER ===============*/
 .footer{
@@ -949,11 +1050,7 @@ img {
 @media screen and (max-width: 320px){
   .container{
     margin-inline: 1rem;
-  }
-
-  
-
-  
+  }  
 
   .footer__content{
     grid-template-columns: max-content;
@@ -1028,7 +1125,6 @@ img {
     background-color: var(--title-color);
   }
   
-
   .join__container{
     grid-template-columns: 360px 500px;
     align-items: center;

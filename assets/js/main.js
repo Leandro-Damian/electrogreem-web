@@ -147,3 +147,84 @@ sr.reveal(`.home__data .button`, {delay: 1200})
 sr.reveal(`.destination__card, .gallery__card`, {interval: 100})
 sr.reveal(`.join__data`, {origin: 'left'})
 sr.reveal(`.join__img`, {origin: 'right'})
+
+/*=============== SERVICES FADE SLIDER ===============*/
+
+const servicesSlides = document.querySelectorAll('.services__slide')
+const prevServiceBtn = document.querySelector('.services__arrow--prev')
+const nextServiceBtn = document.querySelector('.services__arrow--next')
+
+let currentServiceIndex = 0
+let servicesInterval = null
+const SERVICES_DELAY = 4000
+
+/* Show slide */
+function showServiceSlide(index) {
+  servicesSlides.forEach((slide, i) => {
+    slide.classList.toggle('is-active', i === index)
+  })
+}
+
+/* Next slide */
+function nextServiceSlide() {
+  currentServiceIndex =
+    (currentServiceIndex + 1) % servicesSlides.length
+  showServiceSlide(currentServiceIndex)
+}
+
+/* Previous slide */
+function prevServiceSlide() {
+  currentServiceIndex =
+    (currentServiceIndex - 1 + servicesSlides.length) % servicesSlides.length
+  showServiceSlide(currentServiceIndex)
+}
+
+/* Autoplay */
+function startServicesAutoplay() {
+  stopServicesAutoplay()
+  servicesInterval = setInterval(nextServiceSlide, SERVICES_DELAY)
+}
+
+/* Stop autoplay */
+function stopServicesAutoplay() {
+  if (servicesInterval) {
+    clearInterval(servicesInterval)
+    servicesInterval = null
+  }
+}
+
+/* Restart autoplay after interaction */
+function restartServicesAutoplay() {
+  stopServicesAutoplay()
+  startServicesAutoplay()
+}
+
+/* Events */
+if (servicesSlides.length) {
+  // Init
+  showServiceSlide(currentServiceIndex)
+  startServicesAutoplay()
+
+  // Arrows
+  if (nextServiceBtn) {
+    nextServiceBtn.addEventListener('click', () => {
+      nextServiceSlide()
+      restartServicesAutoplay()
+    })
+  }
+
+  if (prevServiceBtn) {
+    prevServiceBtn.addEventListener('click', () => {
+      prevServiceSlide()
+      restartServicesAutoplay()
+    })
+  }
+
+  // Pause on hover (desktop only)
+  const servicesSlider = document.querySelector('.services__slider')
+
+  if (servicesSlider) {
+    servicesSlider.addEventListener('mouseenter', stopServicesAutoplay)
+    servicesSlider.addEventListener('mouseleave', startServicesAutoplay)
+  }
+}
