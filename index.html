@@ -3,28 +3,55 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
       <!--=============== FAVICON ===============-->
       <link rel="shortcut icon" href="assets/img/favicon-electrogreem.png" type="image/x-icon">
-
       <!--=============== REMIXICONS ===============-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-
       <!--=============== SWIPER CSS ===============-->
       <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
+      <title>electrogreem S.R.L.</title>
+      <meta name="author" content="Leandro Damian Chumbita">
+      <meta name="profile" content="Técnico Superior en Programación">
+      <meta name="copyright" content="Website developed by Leandro Damian Chumbita">
+      <!-- Basic site info -->
+      <meta name="description" content="Electrogreem S.R.L. es una empresa dedicada a la gestión responsable de Residuos de Aparatos Eléctricos y Electrónicos (RAEE), promoviendo el reciclaje, la economía circular y la protección del ambiente en Argentina.">
+      <meta name="keywords" content="RAEE, residuos electrónicos, reciclaje electrónico, gestión ambiental, reciclado de electrónicos, economía circular, electrogreem, residuos tecnológicos, Argentina">
+      <meta name="robots" content="index, follow">
+      <meta name="language" content="es-AR">
+      <!-- Company identity -->
+      <meta name="organization" content="Electrogreem S.R.L.">
+      <meta name="company" content="Electrogreem S.R.L.">
+      <meta name="company:country" content="Argentina">
+      <meta name="company:city" content="Tucumán">
+      <meta name="company:industry" content="Gestión de residuos electrónicos">
+      <!-- Purpose / values -->
+     <meta name="subject" content="Gestión responsable de residuos electrónicos">
+     <meta name="topic" content="Sustentabilidad ambiental y reciclaje de RAEE">
+     <meta name="audience" content="Empresas, instituciones, industria y público general">
+     <!-- Open Graph -->
+     <meta property="og:title" content="Electrogreem S.R.L. – Gestión responsable de RAEE">
+     <meta property="og:description" content="Empresa argentina dedicada al reciclaje y gestión sustentable de residuos electrónicos. Protegemos el ambiente y recuperamos valor.">
+     <meta property="og:type" content="website">
+     <meta property="og:locale" content="es_AR">
+     <meta property="og:site_name" content="Electrogreem S.R.L.">
+     <!-- Legal -->
+     <meta name="rights" content="© 2026 Electrogreem S.R.L. Todos los derechos reservados.">
 
-      <title>electrogreem S.R.L</title>
+
+
    </head>
    <body>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
          <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <img src="assets/img/favicon-electrogreem-prueba.png" alt="">
-                <span>electrogreem S.R.L</span>
+            <a href="#home" class="nav__logo">
+                <img
+                 src="assets/img/favicon-electrogreem-prueba.png"
+                 alt="Logo de electrogreem S.R.L - Ir al inicio"
+                >
+                <span>electrogreem S.R.L.</span>
             </a>
 
             <div class="nav__menu" id="nav-menu">
@@ -42,7 +69,7 @@
                     </li>
 
                     <li>
-                        <a href="#service" class="nav__link">Servicios</a>
+                        <a href="#services" class="nav__link">Servicios</a>
                     </li>
 
                     <li>
@@ -69,7 +96,7 @@
       </header>
 
       <!--==================== MAIN ====================-->
-      <main class="main">
+     <main class="main">
 
         <!--==================== HERO ====================-->
         <section class="hero" id="home">
@@ -88,12 +115,12 @@
                     </p>
 
                     <div class="hero__actions">
-                    <a href="#servicios" class="button button--primary">
+                    <a href="#services" class="button button--primary">
                         <i class="ri-flashlight-fill"></i>
                         Nuestros servicios
                     </a>
 
-                    <a href="#raees" class="button button--secondary">
+                    <a href="#raee" class="button button--secondary">
                         <i class="ri-recycle-line"></i>
                         ¿Qué son los RAEEs?
                     </a>
@@ -102,7 +129,7 @@
 
                 <div class="hero__mascot">
                     <img 
-                    src="assets/img/mascota-electrogreem-limpia.png" 
+                    src="assets/img/mascota-electrogreem-limpia-removebg-preview.png" 
                     alt="Mascota de Electrogreem"
                     >
                 </div>
@@ -167,10 +194,10 @@
 
             <!-- RAEE definition -->
             <header class="raee__definition">
-                <h2 class="section__title">¿Qué son los RAEE?</h2>
+                <h2 class="section__title">¿Qué son los RAEEs?</h2>
 
                 <p class="raee__text">
-                    Los RAEE <strong>(Residuos de Aparatos Eléctricos y Electrónicos)</strong> son todos aquellos
+                    Los RAEEs <strong>(Residuos de Aparatos Eléctricos y Electrónicos)</strong> son todos aquellos
                     dispositivos que funcionan con electricidad o baterías y que, al dejar de
                     usarse, se convierten en residuos.
                 </p>
@@ -186,7 +213,10 @@
             <!-- RAEE statistics -->
             <div class="raee__stats">
                 <div class="raee__stats-image">
-                    <img src="assets/img/john-cameron-QukrVl1F9Q0-unsplash.jpg" alt="Baterías y residuos electrónicos">
+                    <img
+                     src="assets/img/john-cameron-QukrVl1F9Q0-unsplash.jpg"
+                     alt="Baterías y residuos electrónicos"
+                    >
                 </div>
 
                 <div class="raee__stats-overlay">
@@ -196,17 +226,17 @@
 
                     <div class="raee__stats-cards">
                         <div class="raee__stats-card">
-                            <span class="raee__stats-number">465.000</span>
+                            <span class="raee__stats-number"><count-up>465000</count-up></span>
                             <span class="raee__stats-label">toneladas al año</span>
                         </div>
 
                         <div class="raee__stats-card">
-                            <span class="raee__stats-number">10,3 kg</span>
+                            <span class="raee__stats-number"><count-up>10,3</count-up>kg</span>
                             <span class="raee__stats-label">por persona</span>
                         </div>
 
                         <div class="raee__stats-card raee__stats-card--alert">
-                            <span class="raee__stats-number">&lt;5%</span>
+                            <span class="raee__stats-number">&lt<count-up>5</count-up>%</span>
                             <span class="raee__stats-label">se recicla formalmente</span>
                         </div>
                     </div>
@@ -228,7 +258,7 @@
 
                     <div class="raee-problem__image">
                         <img
-                        src="assets/img/WhatsApp Image 2025-12-27 at 16.49.15.jpeg"
+                        src="assets/img/chatarra-electronica.jpeg"
                         alt="Acumulación de chatarra electrónica"
                         >
                     </div>
@@ -357,6 +387,7 @@
                 </div>
             </section>        
         </section>
+    
         <!--==================== SERVICES ====================-->
         <section class="services section" id="services">
 
@@ -412,7 +443,7 @@
 
                     <!-- Slide 5 -->
                     <article class="services__slide">
-                        <img src="assets/img/charla-educativa-utn.png" alt="Educación ambiental">
+                        <img src="assets/img/charla-utn.png" alt="Educación ambiental">
                         <div class="services__caption">
                             <h3>Educación ambiental</h3>
                             <p>Charlas y capacitaciones sobre gestión responsable de RAEE.</p>
@@ -420,119 +451,210 @@
                     </article>
 
                 </div>
-
-                <!-- Controls -->
-                <button class="services__arrow services__arrow--prev" aria-label="Anterior">‹</button>
-                <button class="services__arrow services__arrow--next" aria-label="Siguiente">›</button>
-
             </div>
 
             <!-- ===== Collection Point ===== -->
-            <section class="collection-point section">
+            <div class="collection-point">
                 <div class="collection-point__container container">
                     <img
-                    src="assets/img/punto-de-recoleccion.jpeg"
-                    alt="Punto de recolección de residuos electrónicos Electrogreem"
-                    class="collection-point__image"
+                        src="assets/img/punto-de-recoleccion.jpeg"
+                        alt="Punto de recolección de residuos electrónicos Electrogreem"
+                        class="collection-point__image"
                     >
                 </div>
-            </section>
+            </div>
 
-        </section>        
-      </main>
+            <!-- ===== Trust Carousel ===== -->
+            <div class="services__trust">
 
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         <div class="footer__container container grid">
-            <a href="#" class="footer__logo">
-                <img src="assets/img/favicon-electrogreem-prueba.png" alt="image">
-                <span>Electrogreem</span>
-            </a>
+            <h3 class="services__trust-title">
+                Organizaciones que ya gestionaron sus RAEE de forma responsable
+            </h3>
 
-            <div class="footer__content grid">
-                <div>
-                    <h3 class="footer__title">About</h3>
+            <!-- Row 1 -->
+            <div class="trust-marquee trust-marquee--left">
+                <div class="trust-marquee__track">
 
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">About Us</a>
-                        </li>
+                <!-- Logos (1ª tanda) -->
+                <img src="assets/img/fgf-trapani-removebg-preview.png" alt="Trapani">
+                <img src="assets/img/ipsst_.png" alt="IPSST Seguridad social">
+                <img src="assets/img/logo-san-cristobal-seguros-removebg-preview.png" alt="San Cristóbal seguros">
+                <img src="assets/img/citricola-san-miguel.png" alt="San Miguel">
+                <img src="assets/img/Logo-Santista-Versiones-1.png" alt="Santista">
+                <img src="assets/img/senasa-removebg-preview.png" alt="Senasa">
+                <img src="assets/img/argenti-lemon-1-preview.png" alt="Argenti Lemon">
+                <img src="assets/img/quilmes-logo-png_seeklogo-227620.png" alt="Quilmes">
 
-                        <li>
-                            <a href="#" class="footer__link">Features</a>
-                        </li>
+                <!-- Logos duplicados (NO BORRAR) -->
+                <img src="assets/img/fgf-trapani-removebg-preview.png" alt="Trapani">
+                <img src="assets/img/ipsst_.png" alt="IPSST Seguridad social">
+                <img src="assets/img/logo-san-cristobal-seguros-removebg-preview.png" alt="San Cristóbal">
+                <img src="assets/img/citricola-san-miguel.png" alt="San Miguel">
+                <img src="assets/img/Logo-Santista-Versiones-1.png" alt="Santista">
+                <img src="assets/img/senasa-removebg-preview.png" alt="Senasa">
+                <img src="assets/img/argenti-lemon-1-removebg-preview.png" alt="Argenti Lemon">
+                <img src="assets/img/quilmes-logo-png_seeklogo-227620.png" alt="Quilmes">
 
-                        <li>
-                            <a href="#" class="footer__link">News & Blogs</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">Contacts</h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">Call Center</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer__link">Support</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer__link">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">Support</h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">Privacy Policy</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer__link">Terms & Services</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer__link">Payments</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">Social</h3>
-
-                    <div class="footer__social">
-                        <a href="https://www.facebook.com/electrogreem" target="_blank" class="footer__social-link">
-                            <i class="ri-facebook-circle-fill"></i>
-                        </a>
-
-                        <a href="https://www.instagram.com/electrogreemsrl/" target="_blank" class="footer__social-link">
-                            <i class="ri-instagram-fill"></i>
-                        </a>
-
-                        <a href="#" target="_blank" class="footer__social-link">
-                            <i class="ri-twitter-x-fill"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
-         </div>
 
-         <span class="footer__copy">
-            &#169; Todos los derechos reservados por Electrogreem S.R.L
-         </span>
+            <!-- Row 2 -->
+            <div class="trust-marquee trust-marquee--right">
+                <div class="trust-marquee__track">
+
+                <!-- Logos (1ª tanda) -->
+                <img src="assets/img/ypf12-300x100-removebg-preview.png" alt="YPE LUZ">
+                <img src="assets/img/tic-removebg-preview.png" alt="TIC">
+                <img src="assets/img/Naonet-removebg-preview.png" alt="Naonet">
+                <img src="assets/img/los-balcanes-s-a-removebg-preview.png" alt="Los Balcanes S.A">
+                <img src="assets/img/pepsi-removebg-preview.png" alt="Pepsi">
+                <img src="assets/img/edetDefinitivo-removebg-preview.png" alt="EDET">
+                <img src="assets/img/citrusvil-removebg-preview.png" alt="Citrusvil">
+                <img src="assets/img/federacion-patronal-logo-removebg-preview.png" alt="Federacion Patronal">
+                <img src="assets/img/tgn-logo-removebg-preview.png" alt="tgn">
+
+                <!-- Logos duplicados (NO BORRAR) -->
+                <img src="assets/img/ypf12-300x100-removebg-preview.png" alt="YPF LUZ">
+                <img src="assets/img/tic-removebg-preview.png" alt="TIC">
+                <img src="assets/img/Naonet-removebg-preview.png" alt="Naonet">
+                <img src="assets/img/los-balcanes-s-a-removebg-preview.png" alt="Los Balcanes S.A">
+                <img src="assets/img/pepsi-removebg-preview.png" alt="Pepsi">
+                <img src="assets/img/edetDefinitivo-removebg-preview.png" alt="EDET">
+                <img src="assets/img/citrusvil-removebg-preview.png" alt="Citrusvil">
+                <img src="assets/img/federacion-patronal-logo-removebg-preview.png" alt="Federacion Patronal">
+                <img src="assets/img/tgn-logo-removebg-preview.png" alt="tgn">
+                </div>
+            </div>
+
+            </div>           
+
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <div class="contact__container container grid">
+                <div class="contact__data">
+                    <h2 class="section__title">
+                        Contacto 
+                    </h2>
+
+                    <p class="contact__description">
+                        Contáctanos por medio de nuestras plataformas.
+                        Recibiras asesoramiento personalizado para la gestión de tus RAEEs.
+                    </p>
+
+                    <div class="contact__info">
+                        <div>
+                            <div class="contact__icon">
+                                <i class="ri-message-3-fill"></i>
+                            </div>
+
+                            <h3 class="contact__subtitle">Redes sociales</h3>
+
+                            <div class="contact__social">
+                                
+
+                                <a href="https://wa.me/5493814762330?text=%F0%9F%91%8B%20%C2%A1Hola!%20Acabo%20de%20visitar%20tu%20web%20y%20estoy%20interesado%20en%20saber%20m%C3%A1s%20sobre%20tus%20servicios%20%E2%9C%A8" target="_blank" rel="noopener noreferrer" class="contact__social-link">
+                                    <i class="ri-whatsapp-fill"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/electrogreemsrl/" target="_blank" class="contact__social-link">
+                                    <i class="ri-instagram-fill"></i>
+                                </a>
+
+                                <a href="https://www.linkedin.com/company/lectrogreem/posts/?feedView=all" target="_blank" class="contact__social-link">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="contact__icon">
+                                <i class="ri-building-3-fill"></i>
+                            </div>
+
+                            <h3 class="contact__subtitle">Ubicación</h3>
+
+                            <address class="contact__address">
+                                Los Vallistos - Cruz Alta - Tucumán <br>
+                                Cortada de Florez 4109
+                            </address>
+                        </div>
+
+                        <div>
+                            <div class="contact__icon">
+                                <i class="ri-time-fill"></i>
+                            </div>
+
+                            <h3 class="contact__subtitle">Atención</h3>
+
+                            <address class="contact__address">
+                                Lunes a Viernes <br>
+                                07:00 AM - 17:00 PM
+                            </address>
+                        </div>
+
+                        <div>
+                            <div class="contact__icon">
+                                <i class="ri-mail-fill"></i>
+                            </div>
+
+                            <h3 class="contact__subtitle">Email</h3>
+
+                            <address class="contact__address">
+                                depto.comercial.electrogreem@gmail.com
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__map">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1779.5651726665144!2d-65.18938369449349!3d-26.86759954347769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942259001d35a369%3A0x36550b60505d12bc!2sELECTROGREEM%20S.R.L!5e0!3m2!1ses!2sar!4v1769287440980!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+        <div class="footer__container container grid">
+            <a href="#" class="footer__logo">
+                <i class="ri-earth-fill"></i> electrogreem S.R.L
+            </a>
+
+            <div class="footer__social">
+                <a href="https://www.instagram.com/impactonoticiasambientales" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+
+                <a href="https://impactonoticiasambientales.com.ar/" target="_blank" class="footer__social-link">
+                    <i class="ri-newspaper-fill"></i>
+                </a>
+
+                <a href="https://www.youtube.com/results?search_query=impacto+sostenible+tv" target="_blank" class="footer__social-link">
+                    <i class="ri-youtube-fill"></i>
+                </a>
+
+                <a href="https://www.facebook.com/electrogreem/" target="_blank" class="footer__social-link">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+            </div>
+        </div>
+
+        <span class="footer__copy">
+            &#169; 2026 electrogreem S.R.L. Todos los derechos reservados.
+        </span>
       </footer>
 
       <!--========== SCROLL UP ==========-->
       <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-line"></i>
       </a>
+
+      <!--=============== COUNT-UP ===============-->
+      <script type="module" src="https://cdn.jsdelivr.net/gh/lekoala/formidable-elements@master/dist/count-up.min.js"></script>
 
       <!--=============== SCROLLREVEAL ===============-->
       <script src="assets/js/scrollreveal.min.js"></script>
