@@ -70,12 +70,12 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
 })
 
 /*=============== SHOW SCROLL UP ===============*/ 
-const scrollUp = () =>{
-    const scrollUp = document.getElementById('scroll-up')
-    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-                        : scrollUp.classList.remove('show-scroll') 
-}
-window.addEventListener('scroll', scrollUp)
+// const scrollUp = () =>{
+//     const scrollUp = document.getElementById('scroll-up')
+//     this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+//                         : scrollUp.classList.remove('show-scroll') 
+// }
+// window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -123,6 +123,81 @@ themeButton.addEventListener('click', () =>{
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+/*=============== PROCESS SLIDER ===============*/
+
+const processSlides = document.querySelectorAll('.process__slide')
+const processPrevButtons = document.querySelectorAll('.process__prev')
+const processNextButtons = document.querySelectorAll('.process__next')
+
+let currentProcessIndex = 0
+const totalProcessSlides = processSlides.length
+let processInterval = null
+const PROCESS_DELAY = 4000
+
+function showProcessSlide(index) {
+  processSlides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index)
+
+    // actualizar indicador interno del slide activo
+    if (i === index) {
+      const indicator = slide.querySelector('.process__indicator')
+      if (indicator) {
+        indicator.textContent = `${index + 1} / ${totalProcessSlides}`
+      }
+    }
+  })
+}
+
+function nextProcessSlide() {
+  currentProcessIndex =
+    (currentProcessIndex + 1) % totalProcessSlides
+  showProcessSlide(currentProcessIndex)
+}
+
+function prevProcessSlide() {
+  currentProcessIndex =
+    (currentProcessIndex - 1 + totalProcessSlides) % totalProcessSlides
+  showProcessSlide(currentProcessIndex)
+}
+
+/* Autoplay */
+function startProcessAutoplay() {
+  stopProcessAutoplay()
+  processInterval = setInterval(nextProcessSlide, PROCESS_DELAY)
+}
+
+function stopProcessAutoplay() {
+  if (processInterval) {
+    clearInterval(processInterval)
+    processInterval = null
+  }
+}
+
+function restartProcessAutoplay() {
+  stopProcessAutoplay()
+  startProcessAutoplay()
+}
+
+/* Event listeners */
+
+processNextButtons.forEach(button => {
+  button.addEventListener('click', () =>{
+    nextProcessSlide()
+    restartProcessAutoplay()
+  })
+})
+
+processPrevButtons.forEach(button => {
+  button.addEventListener('click', ()=>{
+    prevProcessSlide()
+    restartProcessAutoplay()
+})
+})
+
+/* Inicialización */
+showProcessSlide(currentProcessIndex)
+startProcessAutoplay()
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -142,81 +217,81 @@ sr.reveal(`.raee__stats, .raee-solution__card, .contact__map`, {origin: 'right'}
 
 /*=============== SERVICES FADE SLIDER ===============*/
 
-const servicesSlides = document.querySelectorAll('.services__slide')
-const prevServiceBtn = document.querySelector('.services__arrow--prev')
-const nextServiceBtn = document.querySelector('.services__arrow--next')
+// const servicesSlides = document.querySelectorAll('.services__slide')
+// const prevServiceBtn = document.querySelector('.services__arrow--prev')
+// const nextServiceBtn = document.querySelector('.services__arrow--next')
 
-let currentServiceIndex = 0
-let servicesInterval = null
-const SERVICES_DELAY = 4000
+// let currentServiceIndex = 0
+// let servicesInterval = null
+// const SERVICES_DELAY = 4000
 
 /* Show slide */
-function showServiceSlide(index) {
-  servicesSlides.forEach((slide, i) => {
-    slide.classList.toggle('is-active', i === index)
-  })
-}
+// function showServiceSlide(index) {
+//   servicesSlides.forEach((slide, i) => {
+//     slide.classList.toggle('is-active', i === index)
+//   })
+// }
 
 /* Next slide */
-function nextServiceSlide() {
-  currentServiceIndex =
-    (currentServiceIndex + 1) % servicesSlides.length
-  showServiceSlide(currentServiceIndex)
-}
+// function nextServiceSlide() {
+//   currentServiceIndex =
+//     (currentServiceIndex + 1) % servicesSlides.length
+//   showServiceSlide(currentServiceIndex)
+// }
 
 /* Previous slide */
-function prevServiceSlide() {
-  currentServiceIndex =
-    (currentServiceIndex - 1 + servicesSlides.length) % servicesSlides.length
-  showServiceSlide(currentServiceIndex)
-}
+// function prevServiceSlide() {
+//   currentServiceIndex =
+//     (currentServiceIndex - 1 + servicesSlides.length) % servicesSlides.length
+//   showServiceSlide(currentServiceIndex)
+// }
 
 /* Autoplay */
-function startServicesAutoplay() {
-  stopServicesAutoplay()
-  servicesInterval = setInterval(nextServiceSlide, SERVICES_DELAY)
-}
+// function startServicesAutoplay() {
+//   stopServicesAutoplay()
+//   servicesInterval = setInterval(nextServiceSlide, SERVICES_DELAY)
+// }
 
 /* Stop autoplay */
-function stopServicesAutoplay() {
-  if (servicesInterval) {
-    clearInterval(servicesInterval)
-    servicesInterval = null
-  }
-}
+// function stopServicesAutoplay() {
+//   if (servicesInterval) {
+//     clearInterval(servicesInterval)
+//     servicesInterval = null
+//   }
+// }
 
 /* Restart autoplay after interaction */
-function restartServicesAutoplay() {
-  stopServicesAutoplay()
-  startServicesAutoplay()
-}
+// function restartServicesAutoplay() {
+//   stopServicesAutoplay()
+//   startServicesAutoplay()
+// }
 
 /* Events */
-if (servicesSlides.length) {
+// if (servicesSlides.length) {
   // Init
-  showServiceSlide(currentServiceIndex)
-  startServicesAutoplay()
+  // showServiceSlide(currentServiceIndex)
+  // startServicesAutoplay()
 
   // Arrows
-  if (nextServiceBtn) {
-    nextServiceBtn.addEventListener('click', () => {
-      nextServiceSlide()
-      restartServicesAutoplay()
-    })
-  }
+  // if (nextServiceBtn) {
+  //   nextServiceBtn.addEventListener('click', () => {
+  //     nextServiceSlide()
+  //     restartServicesAutoplay()
+  //   })
+  // }
 
-  if (prevServiceBtn) {
-    prevServiceBtn.addEventListener('click', () => {
-      prevServiceSlide()
-      restartServicesAutoplay()
-    })
-  }
+  // if (prevServiceBtn) {
+  //   prevServiceBtn.addEventListener('click', () => {
+  //     prevServiceSlide()
+  //     restartServicesAutoplay()
+  //   })
+  // }
 
   // Pause on hover (desktop only)
-  const servicesSlider = document.querySelector('.services__slider')
+//   const servicesSlider = document.querySelector('.services__slider')
 
-  if (servicesSlider) {
-    servicesSlider.addEventListener('mouseenter', stopServicesAutoplay)
-    servicesSlider.addEventListener('mouseleave', startServicesAutoplay)
-  }
-}
+//   if (servicesSlider) {
+//     servicesSlider.addEventListener('mouseenter', stopServicesAutoplay)
+//     servicesSlider.addEventListener('mouseleave', startServicesAutoplay)
+//   }
+// }
