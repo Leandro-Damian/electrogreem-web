@@ -589,6 +589,69 @@ img {
   margin-top: 1rem;
 }
 
+/*=============== ABOUT CERTIFICATIONS ===============*/
+
+.about__certifications{
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__certifications-title{
+  font-size: 1.1rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.about__certifications-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about__certification{
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.about__certification-title{
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  margin-bottom: .25rem;
+}
+
+.about__certification-info{
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+/* Hover (para desktop después) */
+.about__certification:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  border-color: var(--green-primary);
+  border-left: 4px solid var(--green-primary);
+}
+
+/* Dark theme */
+.dark-theme .about__certification{
+  background-color: var(--body-color);
+  border: 1px solid var(--opacity-color-20);
+}
+
+.dark-theme .about__certification:hover{
+  border-color: var(--green-primary);
+  border-left: 4px solid var(--green-primary);
+}
+
+.about__certification:hover .about__certification-title{
+  color: var(--green-primary);
+}
+
 .about__card{
   background-color: #ffffff;
   padding: 1.5rem;
@@ -1067,6 +1130,20 @@ img {
   color: var(--title-color);
 }
 
+.process__raee-box {
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.process__raee-accepted {
+  border-left: 4px solid #2ecc71;
+}
+
+.process__raee-rejected {
+  border-left: 4px solid #e74c3c;
+}
+
 .process__closing-text {
   max-width: 650px;
   margin: 0 auto;
@@ -1075,6 +1152,31 @@ img {
   font-size: 0.95rem;
   color: var(--text-color-light);
 }
+
+/* Dark Theme */
+  .dark-theme .process__content{
+    background-color: var(--body-color);
+  }
+  .dark-theme .process__title,
+  .process__description{
+    color: var(--title-color);
+  }
+  .dark-theme .process__description{
+    color: var(--title-color);
+  }
+  .dark-theme .process__indicator,
+  .process__button{
+    color: var(--title-color);
+  }
+  .dark-theme .process__raee-box{
+    background-color: var(--body-color);
+  }
+  .dark-theme .process__raee-heading{
+    color: var(--title-color);
+  }
+  .dark-theme .process__list{
+    color: var(--text-color);
+  }
 
 .impact__header {
   text-align: center;
@@ -1386,12 +1488,11 @@ body.dark-theme .impact__marquee img {
   font-size: var(--small-font-size);
 }
 
+
 /*=============== BREAKPOINTS ===============*/
 
 @media screen and (min-width: 576px){
-  .hero__container{
-    padding-inline: 2rem;
-  }
+
   .hero__title{
     font-size: 2.2rem;
     line-height: 1.2;
@@ -1570,6 +1671,7 @@ body.dark-theme .impact__marquee img {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem 2rem;
   }
+  
   .process__closing {
     margin-top: 3rem;
     padding-top: 2rem;
@@ -1767,7 +1869,16 @@ body.dark-theme .impact__marquee img {
   }
   .about__card-text {
     line-height: 1.7;
-  }  
+  }
+  .about__title{
+    font-size: 2rem;
+  }
+  .about__card-title{
+    font-size: 1.3rem;
+  }
+  .about__certification-title{
+    font-size: 1.1rem;
+  }
   .about__pillars {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1803,6 +1914,10 @@ body.dark-theme .impact__marquee img {
   .process__public,
   .process__closing {
     margin-top: 4rem;
+  }
+  .process__closing-text {
+    max-width: 900px;
+    margin: 0 auto;
   }
   .process__raee-box {
     border-radius: 1rem;
@@ -1851,6 +1966,11 @@ body.dark-theme .impact__marquee img {
   .contact__address {
     word-break: break-word;
   }
+
+  .dark-theme .contact{
+    background-color: var(--container-color);
+  }
+ 
   .footer {
     margin-top: 6rem;
     padding-top: 3rem;
@@ -1874,62 +1994,38 @@ body.dark-theme .impact__marquee img {
 
 /* For large devices */
 @media screen and (min-width: 1440px) {
+
+ .container{
+    max-width: 1024px;
+    margin: 0 auto;
+  }
   
   .hero__container {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
   }
-
   .hero__title {
     font-size: 3.2rem;
     max-width: 600px;
   }
-
   .hero__description {
     font-size: 1.1rem;
     max-width: 520px;
   }
-
   .hero__mascot img {
     width: 420px;
   }
-  .about__container {
-    display: grid;
-    grid-template-columns: 520px 1fr;
-    column-gap: 6rem;
-    align-items: start;
-  }
-  .about__content {
-    max-width: 520px;
-    text-align: left;
-  }
-  .about__title {
-    margin-bottom: 1rem;
-  }
-  .about__subtitle {
-    margin-bottom: 2rem;
-  }
-  .about__text {
-    line-height: 1.75;
-  }
-  .about__highlights {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 520px;
-  }
-  .about__item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  .about__item i {
-    font-size: 1.25rem;
-    margin-top: 0.15rem;
-    flex-shrink: 0;
-  }
 
+  .about__container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .about__content{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
   .raee {
     display: grid;
     grid-template-columns: 1.05fr 1.35fr;
@@ -1975,32 +2071,12 @@ body.dark-theme .impact__marquee img {
     border-radius: 1rem;
     max-height: 220px;
   }
-  .services__header {
-    max-width: 820px;
-    margin-bottom: 4rem;
+  .process__closing-text {
+    max-width: 900px;
+    margin: 0 auto;
   }
-  .services__subtitle {
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-  .services__slider {
-    max-width: 1200px;
-    margin-inline: auto;
-  }
-  .services__slides {
-    height: 620px;
-  }
-  .services__caption {
-    max-width: 520px;
-  }
-  .services__caption h3 {
-    font-size: 1.5rem;
-  }
-  .services__caption p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .trust-marquee__track img {
-    height: 64px;
-  }
+  
+  
+  
+
 }

@@ -69,14 +69,6 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
  }
 })
 
-/*=============== SHOW SCROLL UP ===============*/ 
-// const scrollUp = () =>{
-//     const scrollUp = document.getElementById('scroll-up')
-//     this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-//                         : scrollUp.classList.remove('show-scroll') 
-// }
-// window.addEventListener('scroll', scrollUp)
-
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 
@@ -207,91 +199,12 @@ const sr = ScrollReveal({
     // reset: true, // Animations repeat
 })
 
-sr.reveal(`.hero__content, .services__header, .footer__container, .footer__copy`)
-sr.reveal(`.hero__mascot, .services__slider`, {delay: 600})
-sr.reveal(`.home__description, .collection-point, .services__trust`, {delay: 900})
+sr.reveal(`.hero__content, .services__header, .impact__header, .impact__metrics, .impact__meaning, .impact__education, .footer__container, .footer__copy`)
+sr.reveal(`.hero__mascot, .services__slider, .impact__trust, .impact__closing`, {delay: 600})
+sr.reveal(`.home__description, .collection-point, .services__trust, .process__closing`, {delay: 900})
 sr.reveal(`.home__data .button`, {delay: 1200})
-sr.reveal(`.about__container`, {interval: 100})
-sr.reveal(`.raee__definition, .raee-problem__card, .contact__data`, {origin: 'left'})
-sr.reveal(`.raee__stats, .raee-solution__card, .contact__map`, {origin: 'right'})
+sr.reveal(`.about__container, .process__container`, {interval: 100})
+sr.reveal(`.raee__definition, .raee-problem__card, .contact__data, .process__raee-accepted`, {origin: 'left'})
+sr.reveal(`.raee__stats, .raee-solution__card, .contact__map, .process__raee-rejected`, {origin: 'right'})
 
-/*=============== SERVICES FADE SLIDER ===============*/
 
-// const servicesSlides = document.querySelectorAll('.services__slide')
-// const prevServiceBtn = document.querySelector('.services__arrow--prev')
-// const nextServiceBtn = document.querySelector('.services__arrow--next')
-
-// let currentServiceIndex = 0
-// let servicesInterval = null
-// const SERVICES_DELAY = 4000
-
-/* Show slide */
-// function showServiceSlide(index) {
-//   servicesSlides.forEach((slide, i) => {
-//     slide.classList.toggle('is-active', i === index)
-//   })
-// }
-
-/* Next slide */
-// function nextServiceSlide() {
-//   currentServiceIndex =
-//     (currentServiceIndex + 1) % servicesSlides.length
-//   showServiceSlide(currentServiceIndex)
-// }
-
-/* Previous slide */
-// function prevServiceSlide() {
-//   currentServiceIndex =
-//     (currentServiceIndex - 1 + servicesSlides.length) % servicesSlides.length
-//   showServiceSlide(currentServiceIndex)
-// }
-
-/* Autoplay */
-// function startServicesAutoplay() {
-//   stopServicesAutoplay()
-//   servicesInterval = setInterval(nextServiceSlide, SERVICES_DELAY)
-// }
-
-/* Stop autoplay */
-// function stopServicesAutoplay() {
-//   if (servicesInterval) {
-//     clearInterval(servicesInterval)
-//     servicesInterval = null
-//   }
-// }
-
-/* Restart autoplay after interaction */
-// function restartServicesAutoplay() {
-//   stopServicesAutoplay()
-//   startServicesAutoplay()
-// }
-
-/* Events */
-// if (servicesSlides.length) {
-  // Init
-  // showServiceSlide(currentServiceIndex)
-  // startServicesAutoplay()
-
-  // Arrows
-  // if (nextServiceBtn) {
-  //   nextServiceBtn.addEventListener('click', () => {
-  //     nextServiceSlide()
-  //     restartServicesAutoplay()
-  //   })
-  // }
-
-  // if (prevServiceBtn) {
-  //   prevServiceBtn.addEventListener('click', () => {
-  //     prevServiceSlide()
-  //     restartServicesAutoplay()
-  //   })
-  // }
-
-  // Pause on hover (desktop only)
-//   const servicesSlider = document.querySelector('.services__slider')
-
-//   if (servicesSlider) {
-//     servicesSlider.addEventListener('mouseenter', stopServicesAutoplay)
-//     servicesSlider.addEventListener('mouseleave', startServicesAutoplay)
-//   }
-// }
