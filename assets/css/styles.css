@@ -335,7 +335,6 @@ img {
   font-size: var(--normal-font-size);
   color: rgba(255,255,255,0.85);
   margin-bottom: 2rem;
-  max-width: 320px;
 }
 
 .hero__actions {
@@ -589,8 +588,6 @@ img {
   margin-top: 1rem;
 }
 
-/*=============== ABOUT CERTIFICATIONS ===============*/
-
 .about__certifications{
   margin-top: 2.5rem;
   display: flex;
@@ -599,7 +596,7 @@ img {
 }
 
 .about__certifications-title{
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
 }
@@ -629,7 +626,6 @@ img {
   color: var(--text-color);
 }
 
-/* Hover (para desktop después) */
 .about__certification:hover{
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
@@ -637,7 +633,6 @@ img {
   border-left: 4px solid var(--green-primary);
 }
 
-/* Dark theme */
 .dark-theme .about__certification{
   background-color: var(--body-color);
   border: 1px solid var(--opacity-color-20);
@@ -689,6 +684,8 @@ img {
 .dark-theme .about__card-text{
   color: var(--text-color);
 }
+
+/*=============== RAEE ===============*/
 
 .raee__definition {
   text-align: left;
@@ -1154,30 +1151,37 @@ img {
 }
 
 /* Dark Theme */
-  .dark-theme .process__content{
-    background-color: var(--body-color);
-  }
-  .dark-theme .process__title,
-  .process__description{
-    color: var(--title-color);
-  }
-  .dark-theme .process__description{
-    color: var(--title-color);
-  }
-  .dark-theme .process__indicator,
-  .process__button{
-    color: var(--title-color);
-  }
-  .dark-theme .process__raee-box{
-    background-color: var(--body-color);
-  }
-  .dark-theme .process__raee-heading{
-    color: var(--title-color);
-  }
-  .dark-theme .process__list{
-    color: var(--text-color);
-  }
+.dark-theme .process__content{
+  background-color: var(--body-color);
+}
 
+.dark-theme .process__title,
+.process__description{
+  color: var(--title-color);
+}
+
+.dark-theme .process__description{
+  color: var(--title-color);
+}
+
+.dark-theme .process__indicator,
+.process__button{
+  color: var(--title-color);
+}
+
+.dark-theme .process__raee-box{
+  background-color: var(--body-color);
+}
+
+.dark-theme .process__raee-heading{
+  color: var(--title-color);
+}
+
+.dark-theme .process__list{
+  color: var(--text-color);
+}
+
+/*=============== IMPACT ===============*/
 .impact__header {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -1417,10 +1421,6 @@ body.dark-theme .impact__marquee img {
   padding-block: 3.5rem 2rem;
 }
 
-.dark-theme .footer{
-  background-color: var(--container-color);
-}
-
 .footer__container{
   row-gap: 2rem;
 }
@@ -1499,7 +1499,7 @@ body.dark-theme .impact__marquee img {
   }
   .hero__description{
     font-size: 1rem;
-    max-width: 420px;
+    max-width: 370px;
   }
   .hero__mascot img{
     width: 280px;
@@ -1989,7 +1989,8 @@ body.dark-theme .impact__marquee img {
   .footer__copy {
     margin-top: 3rem;
     opacity: 0.7;
-  }  
+  }
+    
 }
 
 /* For large devices */
